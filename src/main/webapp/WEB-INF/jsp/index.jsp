@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" %>
 <html>
 <head>
@@ -5,10 +6,18 @@
 </head>
 <body>
 <h1>Country: </h1>
-<div>Name: ${name}</div>
+<div>Name: ${countryName}</div>
 <div>Region: ${region}</div>
 <div>Subregion: ${subregion}</div>
 <div>Alpha 2 code: ${alphaTwoCode}</div>
 <div>Alpha 3 code: ${alphaThreeCode}</div>
+<%--<c:forEach items="${countries}" var="country">
+    <div>Name: ${country.countryName}</div>
+    <div>Region: ${country.region}</div>
+    <div>Subregion: ${country.subregion}</div>
+    <div>Alpha 2 code: ${country.alphaTwoCode}</div>
+    <div>Alpha 3 code: ${country.alphaThreeCode}</div>
+    <br>
+</c:forEach>--%>
 </body>
 </html>

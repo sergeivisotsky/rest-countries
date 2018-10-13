@@ -20,12 +20,16 @@ public class CountryController {
         final String countryName = "Latvia";
 
         CountryVO[] countryVO = countryService.getCountryByName(countryName);
-        model.addAttribute("name", countryVO[0].getCountryName());
+        model.addAttribute("countryName", countryVO[0].getCountryName());
         model.addAttribute("region", countryVO[0].getRegion());
         model.addAttribute("subregion", countryVO[0].getSubregion());
         model.addAttribute("alphaTwoCode", countryVO[0].getAlphaTwoCode());
         model.addAttribute("alphaThreeCode", countryVO[0].getAlphaThreeCode());
 
+        CountryVO[] countryVOList = countryService.getAllCountries();
+        for (CountryVO countryVO1 : countryVOList) {
+            model.addAttribute("countries", countryVO1);
+        }
         return "index";
     }
 }
