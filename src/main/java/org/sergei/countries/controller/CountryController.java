@@ -27,9 +27,8 @@ public class CountryController {
         model.addAttribute("alphaThreeCode", countryVO[0].getAlphaThreeCode());
 
         CountryVO[] countryVOList = countryService.getAllCountries();
-        for (CountryVO countryVO1 : countryVOList) {
-            model.addAttribute("countries", countryVO1);
-        }
+        model.addAttribute("countries", countryVOList);
+
         return "index";
     }
 }

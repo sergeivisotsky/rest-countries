@@ -1,7 +1,6 @@
 package org.sergei.countries.service;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.sergei.countries.pojo.CountryListVO;
 import org.sergei.countries.pojo.CountryVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
@@ -33,6 +32,6 @@ public class CountryService {
     }
 
     public CountryVO[] getAllCountries() {
-       return restTemplate.getForObject(REQUEST_URI_GET_ALL, CountryVO[].class);
+        return restTemplate.getForObject(REQUEST_URI_GET_ALL, CountryVO[].class);
     }
 }
