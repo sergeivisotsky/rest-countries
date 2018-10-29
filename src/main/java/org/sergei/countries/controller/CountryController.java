@@ -1,3 +1,7 @@
+/*
+ * Copyright (c) 2018 Sergei Visotsky
+ */
+
 package org.sergei.countries.controller;
 
 import org.sergei.countries.pojo.CountryVO;

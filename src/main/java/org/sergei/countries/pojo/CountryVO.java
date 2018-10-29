@@ -1,3 +1,7 @@
+/*
+ * Copyright (c) 2018 Sergei Visotsky
+ */
+
 package org.sergei.countries.pojo;
 
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
