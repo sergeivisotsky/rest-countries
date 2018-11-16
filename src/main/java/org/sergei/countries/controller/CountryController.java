@@ -1,7 +1,3 @@
-/*
- * Copyright (c) 2018 Sergei Visotsky
- */
-
 package org.sergei.countries.controller;
 
 import org.sergei.countries.pojo.CountryVO;
@@ -12,6 +8,9 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+/**
+ * @author Sergei Visotsky, 2018
+ */
 @Controller
 @RequestMapping("/")
 public class CountryController {

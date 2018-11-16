@@ -1,13 +1,12 @@
-/*
- * Copyright (c) 2018 Sergei Visotsky
- */
-
 package org.sergei.countries.pojo;
 
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 
+/**
+ * @author Sergei Visotsky, 2018
+ */
 @JsonAutoDetect(getterVisibility = JsonAutoDetect.Visibility.NONE)
 public class CountryVO {
     @JsonSerialize

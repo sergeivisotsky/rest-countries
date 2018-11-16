@@ -1,7 +1,3 @@
-/*
- * Copyright (c) 2018 Sergei Visotsky
- */
-
 package org.sergei.countries.service;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -14,6 +10,9 @@ import org.springframework.web.client.RestTemplate;
 
 import java.util.Collections;
 
+/**
+ * @author Sergei Visotsky, 2018
+ */
 @Service
 public class CountryService {
     private static final String REQUEST_URI_GET_ALL = "https://countries.eu/rest/v2/all";

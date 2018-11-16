@@ -11,7 +11,6 @@ import org.springframework.web.client.RestTemplate;
  * @author Sergei Visotsky, 2018
  */
 @Configuration
-@EnableAutoConfiguration
 public class AppConfig {
 
     @Bean
