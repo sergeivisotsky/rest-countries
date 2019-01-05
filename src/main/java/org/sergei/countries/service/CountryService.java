@@ -1,7 +1,6 @@
 package org.sergei.countries.service;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
-import org.sergei.countries.pojo.CountryVO;
+import org.sergei.countries.pojo.Country;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
@@ -11,7 +10,7 @@ import org.springframework.web.client.RestTemplate;
 import java.util.Collections;
 
 /**
- * @author Sergei Visotsky, 2018
+ * @author Sergei Visotsky
  */
 @Service
 public class CountryService {
@@ -20,21 +19,19 @@ public class CountryService {
 
     private final RestTemplate restTemplate;
     private final HttpHeaders httpHeaders;
-    private final ObjectMapper objectMapper;
 
     @Autowired
-    public CountryService(RestTemplate restTemplate, HttpHeaders httpHeaders, ObjectMapper objectMapper) {
+    public CountryService(RestTemplate restTemplate, HttpHeaders httpHeaders) {
         this.restTemplate = restTemplate;
         this.httpHeaders = httpHeaders;
-        this.objectMapper = objectMapper;
     }
 
-    public CountryVO[] getCountryByName(String countryName) {
+    public Country[] getCountryByName(String countryName) {
         httpHeaders.setAccept(Collections.singletonList(MediaType.APPLICATION_JSON));
-        return restTemplate.getForObject(REQUEST_URI_GET_BY_NAME, CountryVO[].class, countryName);
+        return restTemplate.getForObject(REQUEST_URI_GET_BY_NAME, Country[].class, countryName);
     }
 
-    public CountryVO[] getAllCountries() {
-        return restTemplate.getForObject(REQUEST_URI_GET_ALL, CountryVO[].class);
+    public Country[] getAllCountries() {
+        return restTemplate.getForObject(REQUEST_URI_GET_ALL, Country[].class);
     }
 }

@@ -1,6 +1,6 @@
 package org.sergei.countries.controller;
 
-import org.sergei.countries.pojo.CountryVO;
+import org.sergei.countries.pojo.Country;
 import org.sergei.countries.service.CountryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
- * @author Sergei Visotsky, 2018
+ * @author Sergei Visotsky
  */
 @Controller
 @RequestMapping("/")
@@ -22,15 +22,15 @@ public class CountryController {
     public String welcome(Model model) {
         final String countryName = "Latvia";
 
-        CountryVO[] countryVO = countryService.getCountryByName(countryName);
-        model.addAttribute("countryName", countryVO[0].getCountryName());
-        model.addAttribute("region", countryVO[0].getRegion());
-        model.addAttribute("subregion", countryVO[0].getSubregion());
-        model.addAttribute("alphaTwoCode", countryVO[0].getAlphaTwoCode());
-        model.addAttribute("alphaThreeCode", countryVO[0].getAlphaThreeCode());
+        Country[] country = countryService.getCountryByName(countryName);
+        model.addAttribute("countryName", country[0].getCountryName());
+        model.addAttribute("region", country[0].getRegion());
+        model.addAttribute("subregion", country[0].getSubregion());
+        model.addAttribute("alphaTwoCode", country[0].getAlphaTwoCode());
+        model.addAttribute("alphaThreeCode", country[0].getAlphaThreeCode());
 
-        CountryVO[] countryVOList = countryService.getAllCountries();
-        model.addAttribute("countries", countryVOList);
+        Country[] countryList = countryService.getAllCountries();
+        model.addAttribute("countries", countryList);
 
         return "index";
     }

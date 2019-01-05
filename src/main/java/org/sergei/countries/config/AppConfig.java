@@ -8,7 +8,7 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.web.client.RestTemplate;
 
 /**
- * @author Sergei Visotsky, 2018
+ * @author Sergei Visotsky
  */
 @Configuration
 public class AppConfig {
