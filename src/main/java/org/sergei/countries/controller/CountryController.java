@@ -15,8 +15,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/")
 public class CountryController {
 
+    private final CountryService countryService;
+
     @Autowired
-    private CountryService countryService;
+    public CountryController(CountryService countryService) {
+        this.countryService = countryService;
+    }
 
     @GetMapping
     public String welcome(Model model) {
