@@ -14,8 +14,8 @@ import java.util.Collections;
  */
 @Service
 public class CountryService {
-    private static final String REQUEST_URI_GET_ALL = "https://countries.eu/rest/v2/all";
-    private static final String REQUEST_URI_GET_BY_NAME = "https://countries.eu/rest/v2/name/{countryName}";
+    private static final String REQUEST_URI_GET_ALL = "https://restcountries.eu/rest/v2/all";
+    private static final String REQUEST_URI_GET_BY_NAME = "https://restcountries.eu/rest/v2/name/{countryName}";
 
     private final RestTemplate restTemplate;
     private final HttpHeaders httpHeaders;
